@@ -6,6 +6,7 @@ class Achievement extends BaseModel {
   String description;
   DateTime createdAt;
   DateTime assignedAt;
+  String image;
 
   Achievement({
     id,
@@ -13,5 +14,6 @@ class Achievement extends BaseModel {
     this.description,
     this.createdAt,
     this.assignedAt,
+    this.image,
   }): super(id: id);
 }

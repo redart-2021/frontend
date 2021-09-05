@@ -17,6 +17,7 @@ class AchievementRepo extends BaseRestRepository<Achievement> {
       description: item['description'],
       createdAt: DateTime.parse(item['created_at']),
       assignedAt: item['assigned_at'] != null ? DateTime.parse(item['assigned_at']) : null,
+      image: item['image'],
     );
   }
 

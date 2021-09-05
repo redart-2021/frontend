@@ -52,7 +52,11 @@ class AchievementListPageState extends State<AchievementListPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Center(child: Image.asset('images/coin.png', width: 150)),
+                  Center(
+                    child: changedItem.image != null
+                      ? Image.network(changedItem.image, width: 150)
+                      : SizedBox(width: 150, height: 150),
+                  ),
                   Text(changedItem.name, style: TextStyle(fontWeight: FontWeight.bold)),
                   Text(changedItem.description ?? ''),
                   if (changedItem.assignedAt != null)
